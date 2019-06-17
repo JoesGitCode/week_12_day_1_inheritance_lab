@@ -1,3 +1,4 @@
+import management.Manager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,6 +43,7 @@ public class ManagerTest {
     public void canGetAPayBonus(){
         assertEquals(0.253, manager.payBonus(), 0.01);
     }
+
 
 
 

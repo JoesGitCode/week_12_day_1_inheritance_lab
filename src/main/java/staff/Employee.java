@@ -1,8 +1,10 @@
+package staff;
+
 public abstract class Employee {
 
     private String name;
     private int nINumber;
-    private double salary;
+    public double salary;
 
     public Employee(String name, int nINumber, double salary){
         this.name = name;
@@ -14,6 +16,12 @@ public abstract class Employee {
         return name;
     }
 
+    public void setName(String name){
+        if(name != null){
+            this.name = name;
+        }
+    }
+
     public int getnINumber() {
         return nINumber;
     }
@@ -23,7 +31,9 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double raiseAmount){
-        this.salary += this.salary * raiseAmount;
+        if (raiseAmount > 0){
+            this.salary += this.salary * raiseAmount;
+        }
     }
 
     public double payBonus(){
